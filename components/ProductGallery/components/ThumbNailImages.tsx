@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { TImage } from "categorie/types";
+import { TImage } from "../../../src/types";
 
 interface IThumbNailImages {
   images: Array<TImage>;

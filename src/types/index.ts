@@ -41,13 +41,6 @@ export interface ISingleCollection {
   loading: boolean;
 }
 
-type TImage = {
-  node: {
-    id: string;
-    orignalSrc: string;
-  };
-};
-
 export type TOption = {
   id: string;
   name: string;

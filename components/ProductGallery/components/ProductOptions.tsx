@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { TVariant } from "product/types";
+import { TVariant } from "../../../src/types";
 import { breakpoint } from "../../../styles";
 
 export const Wrap = styled.div`

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
+import { TImage } from "../../src/types";
 import MainProductImage from "./components/MainProductImage";
 import ThumbNailImages from "./components/ThumbNailImages";
-import { TImage } from "categorie/types";
 
 interface IProductGallery {
   hasMultipleImages: boolean;
