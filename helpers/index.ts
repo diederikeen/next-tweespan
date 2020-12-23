@@ -1,0 +1,1 @@
+export { titlelize } from "./formatting";
