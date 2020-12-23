@@ -1,12 +1,11 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-
-import { ICollectionsResponse } from "./types";
 import { GET_COLLECTIONS } from "../src/graphql/schema.graphql";
-import { Row, Col } from "index.styles";
 import { Container, padding } from "../styles";
 import ProductCard from "../components/ProductCard/ProductCard";
 import { ProductTypes } from "../components/ProductCard/types";
+import { ICollectionsResponse } from "../src/types";
+import { Col, Row } from "../layouts/main/MainLayout.styles";
 
 function Home() {
   const { data, loading } = useQuery<ICollectionsResponse>(GET_COLLECTIONS);
@@ -32,7 +31,7 @@ function Home() {
         </h1>
       </div>
       <Row>
-        {data.collections.edges.map(({ node: category }) => {
+        {data.collections.edges.map(({ node: category }: any) => {
           const hasItems = category.products.edges.length >= 1;
 
           if (hasItems) {

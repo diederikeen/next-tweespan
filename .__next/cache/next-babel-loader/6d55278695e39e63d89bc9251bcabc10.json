@@ -1,0 +1,1 @@
+{"ast":null,"code":"const color = {\n  button: \"#4389f7\"\n};\nexport default color;","map":null,"metadata":{},"sourceType":"module"}

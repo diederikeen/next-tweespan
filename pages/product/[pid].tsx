@@ -12,7 +12,7 @@ import {
 import { titlelize } from "../../helpers";
 import { Container, padding } from "../../styles";
 import ProductGallery from "../../components/ProductGallery/ProductGallery";
-import { MainContent, Aside, Wrap } from "./Product.styles";
+import { MainContent, Aside, Wrap } from "../../styles/product/product";
 import ProductOptions from "../../components/ProductGallery/components/ProductOptions";
 import { formatCurrency } from "../../helpers/formatting";
 import { useCart } from "../../src/context/cart";
@@ -25,9 +25,17 @@ enum ToasterContent {
   Success = "Product is succesvol toegevoegd",
 }
 
-const SingleProduct: FC = () => {
+interface Props {
+  pid?: string;
+}
+
+const SingleProduct: FC<Props> = (props) => {
   const router = useRouter();
   const { pid } = router.query;
+  if (!pid) {
+    return null;
+  }
+
   const [variant, setVariant] = useState(null);
   const [quantity, setQuantity] = useState<number>(1);
   const [checkoutId, setCheckoutId] = useState<string>();
@@ -226,20 +234,5 @@ const SingleProduct: FC = () => {
     </>
   );
 };
-
-export async function getStaticPaths() {
-  return {
-    paths: ["/product/[pid]"],
-    fallback: true,
-  };
-}
-
-export async function getStaticProps(props: { params: { pid: string } }) {
-  return {
-    props: {
-      pid: props.params.pid,
-    },
-  };
-}
 
 export default SingleProduct;

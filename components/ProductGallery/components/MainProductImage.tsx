@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { MainImage } from "product/Product.styles";
+import { MainImage } from "../../../styles/product/product";
 
 interface IMainProductImage {
   imageSrc: string;

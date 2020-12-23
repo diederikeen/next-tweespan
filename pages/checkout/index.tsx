@@ -8,7 +8,12 @@ import Icon from "../../components/Icon/Icon";
 import { Container, padding } from "../../styles";
 import { useMutation } from "@apollo/react-hooks";
 
-import { Wrap, Row, PaymentActions, PriceColumn } from "./Checkout.styles";
+import {
+  Wrap,
+  Row,
+  PaymentActions,
+  PriceColumn,
+} from "../../styles/checkout/checkout";
 import Link from "next/link";
 import { formatCurrency } from "../../helpers/formatting";
 import { IProductCard } from "../../components/ProductCard/types";

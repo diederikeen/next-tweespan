@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { titlelize } from \"./formatting\";","map":{"version":3,"sources":["/Users/diederik/Projects/next-2-span/helpers/index.ts"],"names":["titlelize"],"mappings":"AAAA,SAASA,SAAT,QAA0B,cAA1B","sourcesContent":["export { titlelize } from \"./formatting\";\n"]},"metadata":{},"sourceType":"module"}

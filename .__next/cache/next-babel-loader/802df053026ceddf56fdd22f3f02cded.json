@@ -1,0 +1,1 @@
+{"ast":null,"code":"var padding = {\n  sm: \"8px\",\n  m: \"16px\",\n  l: \"32px\",\n  xl: \"48px\",\n  xxl: \"64px\"\n};\nexport default padding;","map":null,"metadata":{},"sourceType":"module"}

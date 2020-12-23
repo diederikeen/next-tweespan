@@ -4,22 +4,32 @@ import { useQuery } from "@apollo/react-hooks";
 
 import { GET_SINGLE_COLLECTION } from "../../src/graphql/schema.graphql";
 import { Container, padding } from "../../styles";
-import { Row, Col } from "../index.styles";
 import { titlelize } from "../../helpers";
 import { ProductCard } from "../../components";
 import { ProductTypes } from "../../components/ProductCard/types";
 import HtmlHead from "../../components/HtmlHead/HtmlHead";
 import { ISingleCollection } from "../../src/types";
+import { Col, Row } from "../../layouts/main/MainLayout.styles";
 
-const SingleCategory: FC = () => {
+interface Props {
+  cid?: string;
+}
+
+const SingleCategory: FC<Props> = (props) => {
   const router = useRouter();
   const { cid } = router.query;
+
+  if (!cid) {
+    return null;
+  }
 
   const { data, loading }: ISingleCollection = useQuery(GET_SINGLE_COLLECTION, {
     variables: {
       handle: cid,
     },
   });
+
+  console.log(cid);
 
   const categoryTitle = titlelize(cid, false);
   const prettyTitle = titlelize(cid, true);
@@ -53,7 +63,7 @@ const SingleCategory: FC = () => {
         </div>
         <Row>
           {edges.length > 0 ? (
-            edges.map(({ node }) => {
+            edges.map(({ node }: any) => {
               const nodeImage = node.images.edges[0]?.node.originalSrc;
               const hasMaxVariantPrice =
                 node.priceRange.maxVariantPrice.amount !==
@@ -88,24 +98,5 @@ const SingleCategory: FC = () => {
     </>
   );
 };
-
-export async function getStaticPaths() {
-  return {
-    paths: [
-      "/categorie/verlichting",
-      "/categorie/banden",
-      "/categorie/marathonwagens",
-    ],
-    fallback: true,
-  };
-}
-
-export async function getStaticProps(props: { params: { cid: string } }) {
-  return {
-    props: {
-      cid: props.params.cid,
-    },
-  };
-}
 
 export default SingleCategory;

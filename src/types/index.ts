@@ -1,3 +1,33 @@
+// type TSingleProduct = {
+//   handle: string;
+//   id: string;
+//   edges?: [];
+// };
+
+// type TImageSum = {
+//   id: string;
+//   altText: string;
+//   originalSrc: string;
+// };
+
+// type TSingleCollectionNode = {
+//   node: {
+//     handle: string;
+//     id: string;
+//     image: TImageSum;
+//     products: TSingleProduct;
+//     title: string;
+//   };
+// };
+
+export interface ICollectionsResponse {
+  collections: {
+    edges: Array<TSingleCollection>;
+  };
+  loading: boolean;
+}
+
+
 export type TImage = {
   node: {
     altText?: string;
@@ -40,6 +70,7 @@ export interface ISingleCollection {
   };
   loading: boolean;
 }
+
 
 export type TOption = {
   id: string;
