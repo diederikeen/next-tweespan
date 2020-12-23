@@ -1,1 +1,0 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nimport breakpoint from \"../misc/breakpoints\";\nconst Wrap = styled.div.withConfig({\n  displayName: \"wrap__Wrap\",\n  componentId: \"sc-1ry9v0c-0\"\n})([\"margin-top:2rem;@media screen and (min-width:\", \"){margin-top:3rem;}\"], breakpoint.md);\nexport default Wrap;","map":null,"metadata":{},"sourceType":"module"}

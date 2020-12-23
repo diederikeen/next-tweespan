@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default as TopBar } from \"./TopBar\";","map":{"version":3,"sources":["/Users/diederik/Projects/next-2-span/components/shared/index.ts"],"names":["default","TopBar"],"mappings":"AAAA,SAASA,OAAO,IAAIC,MAApB,QAAkC,UAAlC","sourcesContent":["export { default as TopBar } from \"./TopBar\";\n"]},"metadata":{},"sourceType":"module"}
