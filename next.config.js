@@ -8,6 +8,7 @@ module.exports = withPlugins([
     withGraphQL(),
   ],
   {
-    target: 'serverless'
+    target: 'serverless',
+    exportTrailingSlash: true
   }
 );

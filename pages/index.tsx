@@ -7,7 +7,7 @@ import { ProductTypes } from "../components/ProductCard/types";
 import { ICollectionsResponse } from "../src/types";
 import { Col, Row } from "../layouts/main/MainLayout.styles";
 
-function Home() {
+const Home = () => {
   const { data, loading } = useQuery<ICollectionsResponse>(GET_COLLECTIONS);
 
   //TODO Create spinner component / skeleton components
@@ -50,6 +50,6 @@ function Home() {
       </Row>
     </Container>
   );
-}
+};
 
 export default Home;
