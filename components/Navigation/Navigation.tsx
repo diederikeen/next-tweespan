@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import { ReactSVG } from "react-svg";
-
 import { useQuery } from "@apollo/react-hooks";
+
 import { GET_COLLECTIONS } from "../../src/graphql/schema.graphql";
 import { Nav, Container } from "../../styles";
 
