@@ -9,6 +9,6 @@ module.exports = withPlugins([
   ],
   {
     target: 'serverless',
-    exportTrailingSlash: true
+    trailingSlash: true
   }
 );

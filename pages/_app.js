@@ -31,7 +31,9 @@ export default class App extends NextApp {
       },
 
       onError: (err) => console.log(err),
-    });
+    });    
+
+    console.log('GRAPHQL URL', process.env.NEXT_PUBLIC_SHOPIFY_ACCESS_URL);
 
     return (
       <>
