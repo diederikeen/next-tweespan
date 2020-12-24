@@ -21,7 +21,7 @@ export default class App extends NextApp {
     const { Component, pageProps } = this.props;
 
     const client = new ApolloClient({
-      uri: process.env.NEXT_PUBLIC_SHOPIFY_ACCESS_URL,
+      uri: 'https://2span.myshopify.com/api/2020-04/graphql.json',
       cache: new InMemoryCache(),
 
       headers: {
@@ -33,7 +33,7 @@ export default class App extends NextApp {
       onError: (err) => console.log(err),
     });    
 
-    console.log('GRAPHQL URL', process.env.NEXT_PUBLIC_SHOPIFY_ACCESS_URL);
+    console.log('GRAPHQL URL', 'https://2span.myshopify.com/api/2020-04/graphql.json');
 
     return (
       <>
